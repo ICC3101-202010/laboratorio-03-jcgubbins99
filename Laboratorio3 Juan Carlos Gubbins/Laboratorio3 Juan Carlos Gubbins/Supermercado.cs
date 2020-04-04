@@ -12,6 +12,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
         public List<Bosses> listajefes;
         public List<Supervisors> listasupervisores;
         public List<Auxiliaries> listauxiliares;
+        public List<Producto> listaproductos;
 
         public Supermercado()
 
@@ -21,6 +22,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             listajefes = new List<Bosses>();
             listasupervisores = new List<Supervisors>();
             listauxiliares = new List<Auxiliaries>();
+            listaproductos = new List<Producto>();
         }
         public bool AgregarCliente(Client _cliente)
         {
@@ -124,6 +126,27 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
 
             listauxiliares.Add(_auxiliar);
             Console.WriteLine("Supervisor agregado");
+            Console.WriteLine("================");
+            return true;
+        }
+        public bool AgregarProducto(Producto _producto)
+        {
+
+            for (int i = 0; i < listaproductos.Count; i++)
+            {
+
+                Producto pi = listaproductos[i];
+
+                if ((pi._nombreproducto == _producto._nombreproducto) && (pi._precio == _producto._precio) && (pi._marca == _producto._marca) && (pi._stock == _producto._stock))
+                {
+                    Console.WriteLine("Este producto ya estaba antes ingresado");
+                    return false;
+                }
+
+            }
+
+            listaproductos.Add(_producto);
+            Console.WriteLine("Producto agregado");
             Console.WriteLine("================");
             return true;
         }
