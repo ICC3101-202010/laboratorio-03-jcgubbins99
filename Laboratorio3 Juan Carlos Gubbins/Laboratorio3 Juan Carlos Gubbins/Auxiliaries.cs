@@ -6,11 +6,22 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
 {
     class Auxiliaries : Person
     {
-      
-        public Auxiliaries(string _rut_, string _nombre_, string _apellido_, string _nacimiento_, string _nacionalidad_, string _rol_)
+        public int Sueldo;
+        public int _sueldo
+        {
+            get
+            {
+                return Sueldo;
+            }
+            set
+            {
+                Sueldo = value;
+            }
+        }
+        public Auxiliaries(string _rut_, string _nombre_, string _apellido_, string _nacimiento_, string _nacionalidad_, string _rol_, int _sueldo_)
             : base(_rut_, _nombre_, _apellido_, _nacimiento_, _nacionalidad_,_rol_)
         {
-            this._rol = _rol_;
+            this._sueldo = _sueldo_;
         }
         public string information()
         {
