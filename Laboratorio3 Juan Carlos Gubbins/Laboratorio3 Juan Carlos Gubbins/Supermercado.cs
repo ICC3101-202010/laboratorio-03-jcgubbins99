@@ -248,7 +248,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Bosses jefe = new Bosses(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo, emp._horario);
                 listajefes.Add(jefe);
-                Console.WriteLine("El empleado" + emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut + "a sido ascendido a jefe");
+                Console.WriteLine("El empleado" +" "+ emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut +" "+ "a sido ascendido a jefe");
             }
 
             
@@ -284,7 +284,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Supervisors superv = new Supervisors(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo, emp._horario);
                 listasupervisores.Add(superv);
-                Console.WriteLine("El empleado" + emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut + "a sido ascendido a supervisor");
+                Console.WriteLine("El empleado" + " " + emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut +" "+ "a sido ascendido a supervisor");
             }
 
 
@@ -320,7 +320,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Auxiliaries aux = new Auxiliaries(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo, emp._horario);
                 listauxiliares.Add(aux);
-                Console.WriteLine("El empleado" + emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut + "a sido camibiado a auxiliar");
+                Console.WriteLine("El empleado" +" "+ emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut +" "+ "a sido camibiado a auxiliar");
             }
 
 
@@ -357,7 +357,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Employees emple = new Employees(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo, boss._horario);
                 listaempleados.Add(emple);
-                Console.WriteLine("El jefe" + boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut + "a sido descendido a empleado");
+                Console.WriteLine("El jefe" +" "+ boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut +" "+"a sido descendido a empleado");
             }
 
 
@@ -393,7 +393,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Supervisors supervi = new Supervisors(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo, boss._horario);
                 listasupervisores.Add(supervi);
-                Console.WriteLine("El jefe" + boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut + "a sido camiado a supervisor");
+                Console.WriteLine("El jefe" +" "+ boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut +" "+ "a sido camiado a supervisor");
             }
 
 
@@ -429,7 +429,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Auxiliaries auxi = new Auxiliaries(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo, boss._horario);
                 listauxiliares.Add(auxi);
-                Console.WriteLine("El jefe" + boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut + "a sido descendido a auxiliar");
+                Console.WriteLine("El jefe" +" "+ boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut +" "+ "a sido descendido a auxiliar");
             }
 
 
@@ -465,7 +465,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Employees emple = new Employees(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo, sv._horario);
                 listaempleados.Add(emple);
-                Console.WriteLine("El supervisor" + sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut + "a sido descendido a empleado");
+                Console.WriteLine("El supervisor" +" "+ sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut +"  "+ "a sido descendido a empleado");
             }
 
 
@@ -501,7 +501,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Bosses bosse = new Bosses(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo, sv._horario);
                 listajefes.Add(bosse);
-                Console.WriteLine("El supervisor" + sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut + "a sido cambiado a jefe");
+                Console.WriteLine("El supervisor" +" "+ sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut +" "+ "a sido cambiado a jefe");
             }
 
 
@@ -537,7 +537,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Auxiliaries auxi2 = new Auxiliaries(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo, sv._horario);
                 listauxiliares.Add(auxi2);
-                Console.WriteLine("El supervisor" + sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut + "a sido descendido a auxiliar");
+                Console.WriteLine("El supervisor" +" "+ sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut +" "+"a sido descendido a auxiliar");
             }
 
 
@@ -573,7 +573,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Employees emple2 = new Employees(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo, ax._horario);
                 listaempleados.Add(emple2);
-                Console.WriteLine("El auxiliar" + ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut + "a sido camiado a empleado");
+                Console.WriteLine("El auxiliar" +" "+ ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut +" "+ "a sido camiado a empleado");
             }
 
 
@@ -609,7 +609,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Bosses boss2 = new Bosses(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo, ax._horario);
                 listajefes.Add(boss2);
-                Console.WriteLine("El auxiliar" + ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut + "a sido ascendido a jefe");
+                Console.WriteLine("El auxiliar" +" "+ ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut +" "+ "a sido ascendido a jefe");
             }
 
 
@@ -645,7 +645,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             {
                 Supervisors suv2 = new Supervisors(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo, ax._horario);
                 listasupervisores.Add(suv2);
-                Console.WriteLine("El auxiliar" + ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut + "a sido ascendido a supervisor");
+                Console.WriteLine("El auxiliar" +" "+ ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut +" "+ "a sido ascendido a supervisor");
             }
 
 

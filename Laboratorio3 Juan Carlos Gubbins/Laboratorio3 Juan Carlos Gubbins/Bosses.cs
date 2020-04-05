@@ -38,7 +38,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
         }
         public string information()
         {
-            string informacion = ("Rut: " + _rut + "\n" + "Nombre: " + _nombre + "\n" + "Apellido: " + _apellido + "\n" + "Fecha de nacimiento: " + _nacimiento + "\n" + "Nacionalidad:" + _nacionalidad+ "\n" +"Sueldo:" + _sueldo+"\n"+"Horario de trabajo:"+_horario);
+            string informacion = ("Rut: " + _rut + "\n" + "Nombre: " + _nombre + "\n" + "Apellido: " + _apellido + "\n" + "Fecha de nacimiento: " + _nacimiento + "\n" + "Nacionalidad:" + _nacionalidad+ "\n" +"Sueldo:" +" "+ _sueldo+"\n"+"Horario de trabajo:"+_horario);
             return informacion;
         }
 
