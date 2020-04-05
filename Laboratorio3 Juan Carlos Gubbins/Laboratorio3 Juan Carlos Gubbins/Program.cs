@@ -6,7 +6,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
     {
         static void Main()
         {
-            Client c1 = new Client("dsds", "dfdsfs", "sfsssfs", "fsdsdsffs", "fdsfdsdfs", "fdfd");
+            Client c1 = new Client("dsds", "dfdsfs", "sfsssfs", "fsdsdsffs", "fdsfdsdfs");
             Console.WriteLine(c1.information());
         }
     }

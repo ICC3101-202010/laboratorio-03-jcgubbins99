@@ -150,5 +150,438 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             Console.WriteLine("================");
             return true;
         }
+        public void EmpleadoaJefe(string rut)
+        {
+            Employees emp = null;
+            for (int i = 0; i < listaempleados.Count; i++)
+            {
+                if (listaempleados[i]._rut == rut)
+                {
+                    emp = listaempleados[i];
+
+                }
+
+            }
+            if (emp== null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún empleado");
+            }
+
+            if (emp != null)
+            {
+                Bosses jefe = new Bosses(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo);
+                listajefes.Add(jefe);
+                Console.WriteLine("El empleado" + emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut + "a sido ascendido a jefe");
+            }
+
+            
+            for (int i = 0; i < listaempleados.Count; i++)
+            {
+                if (listaempleados[i]._rut== rut)
+                {
+                    listaempleados.Remove(listaempleados[i]);
+
+                }
+
+            }
+
+        }
+        public void EmpleadoaSuperivsor(string rut)
+        {
+            Employees emp = null;
+            for (int i = 0; i < listaempleados.Count; i++)
+            {
+                if (listaempleados[i]._rut == rut)
+                {
+                    emp = listaempleados[i];
+
+                }
+
+            }
+            if (emp == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún empleado");
+            }
+
+            if (emp != null)
+            {
+                Supervisors superv = new Supervisors(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo);
+                listasupervisores.Add(superv);
+                Console.WriteLine("El empleado" + emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut + "a sido ascendido a supervisor");
+            }
+
+
+            for (int i = 0; i < listaempleados.Count; i++)
+            {
+                if (listaempleados[i]._rut == rut)
+                {
+                    listaempleados.Remove(listaempleados[i]);
+
+                }
+
+            }
+
+        }
+        public void EmpleadoaAuxiliar(string rut)
+        {
+            Employees emp = null;
+            for (int i = 0; i < listaempleados.Count; i++)
+            {
+                if (listaempleados[i]._rut == rut)
+                {
+                    emp = listaempleados[i];
+
+                }
+
+            }
+            if (emp == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún empleado");
+            }
+
+            if (emp != null)
+            {
+                Auxiliaries aux = new Auxiliaries(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo);
+                listauxiliares.Add(aux);
+                Console.WriteLine("El empleado" + emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut + "a sido camibiado a auxiliar");
+            }
+
+
+            for (int i = 0; i < listaempleados.Count; i++)
+            {
+                if (listaempleados[i]._rut == rut)
+                {
+                    listaempleados.Remove(listaempleados[i]);
+
+                }
+
+            }
+
+        }
+
+        public void JefeaEmpleado(string rut)
+        {
+            Bosses boss = null;
+            for (int i = 0; i < listajefes.Count; i++)
+            {
+                if (listajefes[i]._rut == rut)
+                {
+                    boss = listajefes[i];
+
+                }
+
+            }
+            if (boss == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún jefe");
+            }
+
+            if (boss != null)
+            {
+                Employees emple = new Employees(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo);
+                listaempleados.Add(emple);
+                Console.WriteLine("El jefe" + boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut + "a sido descendido a empleado");
+            }
+
+
+            for (int i = 0; i < listajefes.Count; i++)
+            {
+                if (listajefes[i]._rut == rut)
+                {
+                    listajefes.Remove(listajefes[i]);
+
+                }
+
+            }
+
+        }
+        public void JefeaSupervisor(string rut)
+        {
+            Bosses boss = null;
+            for (int i = 0; i < listajefes.Count; i++)
+            {
+                if (listajefes[i]._rut == rut)
+                {
+                    boss = listajefes[i];
+
+                }
+
+            }
+            if (boss == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún jefe");
+            }
+
+            if (boss != null)
+            {
+                Supervisors supervi = new Supervisors(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo);
+                listasupervisores.Add(supervi);
+                Console.WriteLine("El jefe" + boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut + "a sido camiado a supervisor");
+            }
+
+
+            for (int i = 0; i < listajefes.Count; i++)
+            {
+                if (listajefes[i]._rut == rut)
+                {
+                    listajefes.Remove(listajefes[i]);
+
+                }
+
+            }
+
+        }
+        public void JefeaAuxiliar(string rut)
+        {
+            Bosses boss = null;
+            for (int i = 0; i < listajefes.Count; i++)
+            {
+                if (listajefes[i]._rut == rut)
+                {
+                    boss = listajefes[i];
+
+                }
+
+            }
+            if (boss == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún jefe");
+            }
+
+            if (boss != null)
+            {
+                Auxiliaries auxi = new Auxiliaries(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo);
+                listauxiliares.Add(auxi);
+                Console.WriteLine("El jefe" + boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut + "a sido descendido a auxiliar");
+            }
+
+
+            for (int i = 0; i < listajefes.Count; i++)
+            {
+                if (listajefes[i]._rut == rut)
+                {
+                    listajefes.Remove(listajefes[i]);
+
+                }
+
+            }
+
+        }
+        public void SupervisoraEmpleado(string rut)
+        {
+            Supervisors sv = null;
+            for (int i = 0; i < listasupervisores.Count; i++)
+            {
+                if (listasupervisores[i]._rut == rut)
+                {
+                    sv = listasupervisores[i];
+
+                }
+
+            }
+            if (sv == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún supervisor");
+            }
+
+            if (sv != null)
+            {
+                Employees emple = new Employees(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo);
+                listaempleados.Add(emple);
+                Console.WriteLine("El supervisor" + sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut + "a sido descendido a empleado");
+            }
+
+
+            for (int i = 0; i < listasupervisores.Count; i++)
+            {
+                if (listasupervisores[i]._rut == rut)
+                {
+                    listasupervisores.Remove(listasupervisores[i]);
+
+                }
+
+            }
+
+        }
+        public void SupervisoraJefe(string rut)
+        {
+            Supervisors sv = null;
+            for (int i = 0; i < listasupervisores.Count; i++)
+            {
+                if (listasupervisores[i]._rut == rut)
+                {
+                    sv = listasupervisores[i];
+
+                }
+
+            }
+            if (sv == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún supervisor");
+            }
+
+            if (sv != null)
+            {
+                Bosses bosse = new Bosses(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo);
+                listajefes.Add(bosse);
+                Console.WriteLine("El supervisor" + sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut + "a sido cambiado a jefe");
+            }
+
+
+            for (int i = 0; i < listasupervisores.Count; i++)
+            {
+                if (listasupervisores[i]._rut == rut)
+                {
+                    listasupervisores.Remove(listasupervisores[i]);
+
+                }
+
+            }
+
+        }
+        public void SupervisoraAuxiliar(string rut)
+        {
+            Supervisors sv = null;
+            for (int i = 0; i < listasupervisores.Count; i++)
+            {
+                if (listasupervisores[i]._rut == rut)
+                {
+                    sv = listasupervisores[i];
+
+                }
+
+            }
+            if (sv == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún supervisor");
+            }
+
+            if (sv != null)
+            {
+                Auxiliaries auxi2 = new Auxiliaries(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo);
+                listauxiliares.Add(auxi2);
+                Console.WriteLine("El supervisor" + sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut + "a sido descendido a auxiliar");
+            }
+
+
+            for (int i = 0; i < listasupervisores.Count; i++)
+            {
+                if (listasupervisores[i]._rut == rut)
+                {
+                    listasupervisores.Remove(listasupervisores[i]);
+
+                }
+
+            }
+
+        }
+        public void AuxiliaraEmpleado(string rut)
+        {
+            Auxiliaries ax = null;
+            for (int i = 0; i < listauxiliares.Count; i++)
+            {
+                if (listauxiliares[i]._rut == rut)
+                {
+                    ax = listauxiliares[i];
+
+                }
+
+            }
+            if (ax == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún auxiliar");
+            }
+
+            if (ax != null)
+            {
+                Employees emple2 = new Employees(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo);
+                listaempleados.Add(emple2);
+                Console.WriteLine("El auxiliar" + ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut + "a sido camiado a empleado");
+            }
+
+
+            for (int i = 0; i < listauxiliares.Count; i++)
+            {
+                if (listauxiliares[i]._rut == rut)
+                {
+                    listauxiliares.Remove(listauxiliares[i]);
+
+                }
+
+            }
+
+        }
+        public void AuxiliaraJefe(string rut)
+        {
+            Auxiliaries ax = null;
+            for (int i = 0; i < listauxiliares.Count; i++)
+            {
+                if (listauxiliares[i]._rut == rut)
+                {
+                    ax = listauxiliares[i];
+
+                }
+
+            }
+            if (ax == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún auxiliar");
+            }
+
+            if (ax != null)
+            {
+                Bosses boss2 = new Bosses(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo);
+                listajefes.Add(boss2);
+                Console.WriteLine("El auxiliar" + ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut + "a sido ascendido a jefe");
+            }
+
+
+            for (int i = 0; i < listauxiliares.Count; i++)
+            {
+                if (listauxiliares[i]._rut == rut)
+                {
+                    listauxiliares.Remove(listauxiliares[i]);
+
+                }
+
+            }
+
+        }
+        public void AuxiliaraSupervisor(string rut)
+        {
+            Auxiliaries ax = null;
+            for (int i = 0; i < listauxiliares.Count; i++)
+            {
+                if (listauxiliares[i]._rut == rut)
+                {
+                    ax = listauxiliares[i];
+
+                }
+
+            }
+            if (ax == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún auxiliar");
+            }
+
+            if (ax != null)
+            {
+                Supervisors suv2 = new Supervisors(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo);
+                listasupervisores.Add(suv2);
+                Console.WriteLine("El auxiliar" + ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut + "a sido ascendido a supervisor");
+            }
+
+
+            for (int i = 0; i < listauxiliares.Count; i++)
+            {
+                if (listauxiliares[i]._rut == rut)
+                {
+                    listauxiliares.Remove(listauxiliares[i]);
+
+                }
+
+            }
+
+        }
     }
 }

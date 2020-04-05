@@ -11,7 +11,6 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
         private string Apellido;
         private string Nacifecha;
         private string Nacionalidad;
-        private string Rol;
 
 
         public string _rut
@@ -70,27 +69,19 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Nacionalidad = value;
             }
         }
-        public string _rol
-        {
-            get
-            {
-                return Rol;
-            }
-            set
-            {
-                Rol = value;
-            }
-        }
 
 
-        public Person(string _rut_, string _nombre_, string _apellido_, string _nacimiento_, string _nacionalidad_, string _rol_)
+
+
+        public Person(string _rut_, string _nombre_, string _apellido_, string _nacimiento_, string _nacionalidad_)
         {
             this._rut = _rut_;
             this._nombre = _nombre_;
             this._apellido = _apellido_;
             this._nacimiento = _nacimiento_;
             this._nacionalidad = _nacionalidad_;
-            this._rol = _rol_;
+            
+            
         }
     
         
