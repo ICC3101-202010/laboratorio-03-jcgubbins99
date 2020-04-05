@@ -679,7 +679,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (e1 != null)
             {
                 e1._sueldo = sueldo;
-                Console.WriteLine("Se le a cambiado el sueldo al empleado:" + e1._nombre + " " + e1._apellido + " " + "al monto" + e1._sueldo);
+                Console.WriteLine("Se le a cambiado el sueldo al empleado:" +" "+ e1._nombre + " " + e1._apellido + " " + "al monto:" +" "+e1._sueldo);
             }
 
         }
@@ -702,7 +702,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (b1 != null)
             {
                 b1._sueldo = sueldo;
-                Console.WriteLine("Se le a cambiado el sueldo al jefe:" + b1._nombre + " " + b1._apellido + " " + "al monto" + b1._sueldo);
+                Console.WriteLine("Se le a cambiado el sueldo al jefe:" +" "+ b1._nombre + " " + b1._apellido + " " + "al monto:"+" "+ + b1._sueldo);
             }
 
         }
@@ -725,7 +725,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (s1 != null)
             {
                 s1._sueldo = sueldo;
-                Console.WriteLine("Se le a cambiado el sueldo al supervisor" + s1._nombre + " " + s1._apellido + " " + "al monto" + s1._sueldo);
+                Console.WriteLine("Se le a cambiado el sueldo al supervisor" +" "+ s1._nombre + " " + s1._apellido + " " + "al monto:" +" "+ s1._sueldo);
             }
 
         }
@@ -748,7 +748,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (a1 != null)
             {
                 a1._sueldo = sueldo;
-                Console.WriteLine("Se le a cambiado el sueldo al auxiliar" + a1._nombre + " " + a1._apellido + " " + "al monto" + a1._sueldo);
+                Console.WriteLine("Se le a cambiado el sueldo al auxiliar" +" "+ a1._nombre + " " + a1._apellido + " " + "al monto:" +" "+ a1._sueldo);
             }
 
         }

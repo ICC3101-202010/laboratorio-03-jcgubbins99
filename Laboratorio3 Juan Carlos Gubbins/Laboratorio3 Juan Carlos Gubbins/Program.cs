@@ -13,8 +13,8 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             Console.WriteLine("1.-Ver información del personal");
             Console.WriteLine("2.-Agregar personal y clientes");
             Console.WriteLine("3.-Modificar rol del personal");
-            Console.WriteLine("4.-Crear Playlist");
-            Console.WriteLine("5.-Ver Playlists");
+            Console.WriteLine("4.-Modificar sueldo personal");
+            Console.WriteLine("5.-Modificar horario personal");
             Console.WriteLine("6.-Salir del programa");
 
             string accion = null;
@@ -65,10 +65,10 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Has salido de información de personal");
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("1.-Ver información del personal");
-                                    Console.WriteLine("2.-Agregar una canción");
-                                    Console.WriteLine("3.-Ver canciones por criterio");
-                                    Console.WriteLine("4.-Crear Playlist");
-                                    Console.WriteLine("5.-Ver Playlists");
+                                    Console.WriteLine("2.-Agregar personal y clientes");
+                                    Console.WriteLine("3.-Modificar rol del personal");
+                                    Console.WriteLine("4.-Modificar sueldo personal");
+                                    Console.WriteLine("5.-Modificar horario personal");
                                     Console.WriteLine("6.-Salir del programa");
 
 
@@ -236,10 +236,10 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Has salido de agregar personal y clientes");
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("1.-Ver información del personal");
-                                    Console.WriteLine("2.-Agregar una canción");
-                                    Console.WriteLine("3.-Ver canciones por criterio");
-                                    Console.WriteLine("4.-Crear Playlist");
-                                    Console.WriteLine("5.-Ver Playlists");
+                                    Console.WriteLine("2.-Agregar personal y clientes");
+                                    Console.WriteLine("3.-Modificar rol del personal");
+                                    Console.WriteLine("4.-Modificar sueldo personal");
+                                    Console.WriteLine("5.-Modificar horario personal");
                                     Console.WriteLine("6.-Salir del programa");
                                     break;
                                 default:
@@ -347,10 +347,10 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Has salido de la opción mover de rol");
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("1.-Ver información del personal");
-                                    Console.WriteLine("2.-Agregar una canción");
-                                    Console.WriteLine("3.-Ver canciones por criterio");
-                                    Console.WriteLine("4.-Crear Playlist");
-                                    Console.WriteLine("5.-Ver Playlists");
+                                    Console.WriteLine("2.-Agregar personal y clientes");
+                                    Console.WriteLine("3.-Modificar rol del personal");
+                                    Console.WriteLine("4.-Modificar sueldo personal");
+                                    Console.WriteLine("5.-Modificar horario personal");
                                     Console.WriteLine("6.-Salir del programa");
                                     break;
                                 default:
@@ -359,6 +359,77 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
 
                             }
                         }
+                        break;
+                    case "4":
+                        Console.WriteLine("a.-Modificar sueldo empleado");
+                        Console.WriteLine("b.-Modificar sueldo jefe");
+                        Console.WriteLine("c.-Modificar sueldo supervisor");
+                        Console.WriteLine("d.-Modificar sueldo auxiliar");
+                        Console.WriteLine("e.-Salir de esta opción");
+                        string opcion4 = null;
+                        while (opcion4 != "e")
+                        {
+                            opcion4 = Console.ReadLine();
+                            switch (opcion4)
+                            {
+                                case "a":
+                                    string r = "";
+                                    int s = 0;
+                                    Console.WriteLine("ingrese el rut del empleado al que desea cambiarle el sueldo");
+                                    r = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nuevo sueldo para este empleado");
+                                    s = Convert.ToInt32(Console.ReadLine());
+                                    super.SueldoEmpleado(r, s);
+                                    break;
+                                case "b":
+                                    string r1 = "";
+                                    int s1 = 0;
+                                    Console.WriteLine("ingrese el rut del jefe al que desea cambiarle el sueldo");
+                                    r1 = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nuevo sueldo para este jefe");
+                                    s1 = Convert.ToInt32(Console.ReadLine());
+                                    super.SueldoJefe(r1, s1);
+                                    break;
+                                case "c":
+                                    string r2 = "";
+                                    int s2 = 0;
+                                    Console.WriteLine("ingrese el rut del supervisor al que desea cambiarle el sueldo");
+                                    r2 = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nuevo sueldo para este supervisor");
+                                    s2 = Convert.ToInt32(Console.ReadLine());
+                                    super.SueldoSupervisor(r2, s2);
+                                    break;
+                                case "d":
+                                    string r3 = "";
+                                    int s3 = 0;
+                                    Console.WriteLine("ingrese el rut del auxiliar al que desea cambiarle el sueldo");
+                                    r3 = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nuevo sueldo para este auxiliar");
+                                    s3 = Convert.ToInt32(Console.ReadLine());
+                                    super.SueldoAuxiliar(r3, s3);
+                                    break;
+                                case "e":
+                                    Console.WriteLine("=====================");
+                                    Console.WriteLine("Has salido de la opción cambiar sueldo");
+                                    Console.WriteLine("=====================");
+                                    Console.WriteLine("1.-Ver información del personal");
+                                    Console.WriteLine("2.-Agregar personal y clientes");
+                                    Console.WriteLine("3.-Modificar rol del personal");
+                                    Console.WriteLine("4.-Modificar sueldo personal");
+                                    Console.WriteLine("5.-Modificar horario personal");
+                                    Console.WriteLine("6.-Salir del programa");
+                                    break;
+                                default:
+                                    Console.WriteLine("No se ha seleccionado ninguna opción válida");
+                                    break;
+
+
+
+                            }
+                        }
+                        break;
+                    case "5":
+
                         break;
 
                 }
