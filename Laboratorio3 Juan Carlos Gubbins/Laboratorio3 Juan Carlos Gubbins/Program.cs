@@ -41,29 +41,49 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Empleados:");
                                     Console.WriteLine("=====================");
                                     super.VerEmpleados(super.listaempleados);
+                                    Console.WriteLine("a.-Ver información de los empleados");
+                                    Console.WriteLine("b.-Ver información de los jefes");
+                                    Console.WriteLine("c.-Ver información de los supervisores ");
+                                    Console.WriteLine("d.-Ver información de los auxiliares");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "b":
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("Jefes:");
                                     Console.WriteLine("=====================");
                                     super.VerJefes(super.listajefes);
+                                    Console.WriteLine("a.-Ver información de los empleados");
+                                    Console.WriteLine("b.-Ver información de los jefes");
+                                    Console.WriteLine("c.-Ver información de los supervisores ");
+                                    Console.WriteLine("d.-Ver información de los auxiliares");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "c":
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("Supervisores:");
                                     Console.WriteLine("=====================");
                                     super.VerSupervisores(super.listasupervisores);
+                                    Console.WriteLine("a.-Ver información de los empleados");
+                                    Console.WriteLine("b.-Ver información de los jefes");
+                                    Console.WriteLine("c.-Ver información de los supervisores ");
+                                    Console.WriteLine("d.-Ver información de los auxiliares");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "d":
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("Auxiliares:");
                                     Console.WriteLine("=====================");
                                     super.VerAuxiliares(super.listauxiliares);
+                                    Console.WriteLine("a.-Ver información de los empleados");
+                                    Console.WriteLine("b.-Ver información de los jefes");
+                                    Console.WriteLine("c.-Ver información de los supervisores ");
+                                    Console.WriteLine("d.-Ver información de los auxiliares");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "e":
-                                    Console.WriteLine("=====================");
+                                    Console.WriteLine("=====================================");
                                     Console.WriteLine("Has salido de información de personal");
-                                    Console.WriteLine("=====================");
+                                    Console.WriteLine("======================================");
                                     Console.WriteLine("1.-Ver información del personal");
                                     Console.WriteLine("2.-Agregar personal y clientes");
                                     Console.WriteLine("3.-Modificar rol del personal");
@@ -114,6 +134,12 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     nacionalidad = Console.ReadLine();
                                     Client c1 = new Client(rut, nombre, apellido, nacimiento, nacionalidad);
                                     super.AgregarCliente(c1);
+                                    Console.WriteLine("a.-Agregar cliente");
+                                    Console.WriteLine("b.-Agregar empleado");
+                                    Console.WriteLine("c.-Agregar jefe");
+                                    Console.WriteLine("d.-Agregar supervisor");
+                                    Console.WriteLine("e.-Agregar auxiliar");
+                                    Console.WriteLine("f.-Salir de esta opción");
                                     break;
                                 case "b":
                                     Console.WriteLine("=====================");
@@ -143,6 +169,12 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
 
                                     Employees e1 = new Employees(rut2, nombre2, apellido2, nacimiento2, nacionalidad2,sueldo,horario);
                                     super.AgregarEmpleado(e1);
+                                    Console.WriteLine("a.-Agregar cliente");
+                                    Console.WriteLine("b.-Agregar empleado");
+                                    Console.WriteLine("c.-Agregar jefe");
+                                    Console.WriteLine("d.-Agregar supervisor");
+                                    Console.WriteLine("e.-Agregar auxiliar");
+                                    Console.WriteLine("f.-Salir de esta opción");
                                     break;
                                 case "c":
                                     Console.WriteLine("=====================");
@@ -172,6 +204,12 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
 
                                     Bosses b1 = new Bosses(rut3, nombre3, apellido3, nacimiento3, nacionalidad3, sueldo1, horario1);
                                     super.AgregarJefe(b1);
+                                    Console.WriteLine("a.-Agregar cliente");
+                                    Console.WriteLine("b.-Agregar empleado");
+                                    Console.WriteLine("c.-Agregar jefe");
+                                    Console.WriteLine("d.-Agregar supervisor");
+                                    Console.WriteLine("e.-Agregar auxiliar");
+                                    Console.WriteLine("f.-Salir de esta opción");
                                     break;
                                 case "d":
                                     Console.WriteLine("=====================");
@@ -201,6 +239,12 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
 
                                     Supervisors s1 = new Supervisors(rut4, nombre4, apellido4, nacimiento4, nacionalidad4, sueldo2, horario2);
                                     super.AgregarSupervisor(s1);
+                                    Console.WriteLine("a.-Agregar cliente");
+                                    Console.WriteLine("b.-Agregar empleado");
+                                    Console.WriteLine("c.-Agregar jefe");
+                                    Console.WriteLine("d.-Agregar supervisor");
+                                    Console.WriteLine("e.-Agregar auxiliar");
+                                    Console.WriteLine("f.-Salir de esta opción");
                                     break;
                                 case "e":
                                     Console.WriteLine("=====================");
@@ -230,6 +274,12 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
 
                                     Auxiliaries a1 = new Auxiliaries(rut5, nombre5, apellido5, nacimiento5, nacionalidad5, sueldo3, horario3);
                                     super.AgregarAuxiliar(a1);
+                                    Console.WriteLine("a.-Agregar cliente");
+                                    Console.WriteLine("b.-Agregar empleado");
+                                    Console.WriteLine("c.-Agregar jefe");
+                                    Console.WriteLine("d.-Agregar supervisor");
+                                    Console.WriteLine("e.-Agregar auxiliar");
+                                    Console.WriteLine("f.-Salir de esta opción");
                                     break;
                                 case "f":
                                     Console.WriteLine("=====================");
@@ -275,72 +325,240 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("ingrese el rut de el empleado que desea ascender a jefe");
                                     rut_ = Console.ReadLine();
                                     super.EmpleadoaJefe(rut_);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "b":
                                     string rut_2 = "";
                                     Console.WriteLine("ingrese el rut de el empleado que desea ascender a supervisor");
                                     rut_2 = Console.ReadLine();
                                     super.EmpleadoaSuperivsor(rut_2);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "c":
                                     string rut_3 = "";
                                     Console.WriteLine("ingrese el rut de el empleado que desea cambiar a auxiliar");
                                     rut_3 = Console.ReadLine();
                                     super.EmpleadoaAuxiliar (rut_3);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "d":
                                     string rut_4 = "";
                                     Console.WriteLine("ingrese el rut de el jefe que desea descender a empleado");
                                     rut_4 = Console.ReadLine();
                                     super.JefeaEmpleado(rut_4);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "e":
                                     string rut_5 = "";
                                     Console.WriteLine("ingrese el rut de el jefe que desea cambiar a supervisor");
                                     rut_5 = Console.ReadLine();
                                     super.JefeaSupervisor(rut_5);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "f":
                                     string rut_6 = "";
                                     Console.WriteLine("ingrese el rut de el jefe que desea descender a auxiliar");
                                     rut_6 = Console.ReadLine();
                                     super.JefeaAuxiliar(rut_6);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "g":
                                     string rut_7 = "";
                                     Console.WriteLine("ingrese el rut de el supervisor que desea descender a empleado");
                                     rut_7 = Console.ReadLine();
                                     super.SupervisoraEmpleado(rut_7);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "h":
                                     string rut_8 = "";
                                     Console.WriteLine("ingrese el rut de el supervisor que desea cambiar a jefe");
                                     rut_8 = Console.ReadLine();
                                     super.SupervisoraJefe(rut_8);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "i":
                                     string rut_9 = "";
                                     Console.WriteLine("ingrese el rut de el supervisor que desea descender a auxiliar");
                                     rut_9 = Console.ReadLine();
                                     super.SupervisoraAuxiliar(rut_9);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "j":
                                     string rut_10 = "";
                                     Console.WriteLine("ingrese el rut de el auxiliar que desea cambiar a empleado");
                                     rut_10 = Console.ReadLine();
                                     super.AuxiliaraEmpleado(rut_10);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "k":
                                     string rut_11 = "";
                                     Console.WriteLine("ingrese el rut de el auxiliar que desea ascender a jefe");
                                     rut_11 = Console.ReadLine();
                                     super.AuxiliaraJefe(rut_11);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "l":
                                     string rut_12 = "";
                                     Console.WriteLine("ingrese el rut de el auxiliar que desea ascender a supervispr");
                                     rut_12 = Console.ReadLine();
                                     super.AuxiliaraSupervisor(rut_12);
+                                    Console.WriteLine("A quien deseas cambiar de rol");
+                                    Console.WriteLine("a.- De empelado a jefe");
+                                    Console.WriteLine("b.- De empleado a supervisor");
+                                    Console.WriteLine("c.- De empleado a auxiliar");
+                                    Console.WriteLine("d.- De jefe a empleado");
+                                    Console.WriteLine("e.- De jefe a supervisor");
+                                    Console.WriteLine("f.- De jefe a auxiliar");
+                                    Console.WriteLine("g.- De supervisor a empleado");
+                                    Console.WriteLine("h.- De supervisor a jefe");
+                                    Console.WriteLine("i.- De supervisor a auxiliar");
+                                    Console.WriteLine("j.- De auxiliar a empleado");
+                                    Console.WriteLine("k.- De auxiliar a jefe");
+                                    Console.WriteLine("l.- De auxiliar a supervisor");
+                                    Console.WriteLine("m.-Salir de esta opción");
                                     break;
                                 case "m":
                                     Console.WriteLine("=====================");
@@ -380,6 +598,11 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Ingrese el nuevo sueldo para este empleado");
                                     s = Convert.ToInt32(Console.ReadLine());
                                     super.SueldoEmpleado(r, s);
+                                    Console.WriteLine("a.-Modificar sueldo empleado");
+                                    Console.WriteLine("b.-Modificar sueldo jefe");
+                                    Console.WriteLine("c.-Modificar sueldo supervisor");
+                                    Console.WriteLine("d.-Modificar sueldo auxiliar");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "b":
                                     string r1 = "";
@@ -389,6 +612,11 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Ingrese el nuevo sueldo para este jefe");
                                     s1 = Convert.ToInt32(Console.ReadLine());
                                     super.SueldoJefe(r1, s1);
+                                    Console.WriteLine("a.-Modificar sueldo empleado");
+                                    Console.WriteLine("b.-Modificar sueldo jefe");
+                                    Console.WriteLine("c.-Modificar sueldo supervisor");
+                                    Console.WriteLine("d.-Modificar sueldo auxiliar");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "c":
                                     string r2 = "";
@@ -398,6 +626,11 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Ingrese el nuevo sueldo para este supervisor");
                                     s2 = Convert.ToInt32(Console.ReadLine());
                                     super.SueldoSupervisor(r2, s2);
+                                    Console.WriteLine("a.-Modificar sueldo empleado");
+                                    Console.WriteLine("b.-Modificar sueldo jefe");
+                                    Console.WriteLine("c.-Modificar sueldo supervisor");
+                                    Console.WriteLine("d.-Modificar sueldo auxiliar");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "d":
                                     string r3 = "";
@@ -407,6 +640,11 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Ingrese el nuevo sueldo para este auxiliar");
                                     s3 = Convert.ToInt32(Console.ReadLine());
                                     super.SueldoAuxiliar(r3, s3);
+                                    Console.WriteLine("a.-Modificar sueldo empleado");
+                                    Console.WriteLine("b.-Modificar sueldo jefe");
+                                    Console.WriteLine("c.-Modificar sueldo supervisor");
+                                    Console.WriteLine("d.-Modificar sueldo auxiliar");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "e":
                                     Console.WriteLine("=====================");
@@ -448,6 +686,11 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Ingrese el nuevo horario para este empleado");
                                     horari = Console.ReadLine();
                                     super.HorarioEmpleado(rutu, horari);
+                                    Console.WriteLine("a.-Modificar horario empleado");
+                                    Console.WriteLine("b.-Modificar horario jefe");
+                                    Console.WriteLine("c.-Modificar horario supervisor");
+                                    Console.WriteLine("d.-Modificar horario auxiliar");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "b":
                                     string rutu1 = "";
@@ -457,6 +700,11 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Ingrese el nuevo horario para este jefe");
                                     horari1 = Console.ReadLine();
                                     super.HorarioJefe(rutu1, horari1);
+                                    Console.WriteLine("a.-Modificar horario empleado");
+                                    Console.WriteLine("b.-Modificar horario jefe");
+                                    Console.WriteLine("c.-Modificar horario supervisor");
+                                    Console.WriteLine("d.-Modificar horario auxiliar");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "c":
                                     string rutu2 = "";
@@ -466,6 +714,11 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Ingrese el nuevo horario para este supervisor");
                                     horari2 = Console.ReadLine();
                                     super.HorarioSupervisor(rutu2, horari2);
+                                    Console.WriteLine("a.-Modificar horario empleado");
+                                    Console.WriteLine("b.-Modificar horario jefe");
+                                    Console.WriteLine("c.-Modificar horario supervisor");
+                                    Console.WriteLine("d.-Modificar horario auxiliar");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "d":
                                     string rutu3 = "";
@@ -475,6 +728,11 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("Ingrese el nuevo horario para este auxiliar");
                                     horari3 = Console.ReadLine();
                                     super.HorarioAuxiliar(rutu3, horari3);
+                                    Console.WriteLine("a.-Modificar horario empleado");
+                                    Console.WriteLine("b.-Modificar horario jefe");
+                                    Console.WriteLine("c.-Modificar horario supervisor");
+                                    Console.WriteLine("d.-Modificar horario auxiliar");
+                                    Console.WriteLine("e.-Salir de esta opción");
                                     break;
                                 case "e":
                                     Console.WriteLine("=====================");

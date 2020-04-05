@@ -13,6 +13,8 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
         public List<Supervisors> listasupervisores;
         public List<Auxiliaries> listauxiliares;
         public List<Producto> listaproductos;
+        public List<Producto> productoscomprados;
+        public List<Boleta> listbol;
 
         public Supermercado()
 
@@ -23,12 +25,14 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             listasupervisores = new List<Supervisors>();
             listauxiliares = new List<Auxiliaries>();
             listaproductos = new List<Producto>();
+            listbol = new List<Boleta>();
         }
         public void VerEmpleados(List<Employees> lista)
         {
             if (lista.Count == 0)
             {
                 Console.WriteLine("No hay empleados agregados aún");
+                Console.WriteLine("===============================");
             }
 
             else
@@ -48,6 +52,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (lista.Count == 0)
             {
                 Console.WriteLine("No hay jefes agregados aún");
+                Console.WriteLine("===============================");
             }
 
             else
@@ -67,6 +72,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (lista.Count == 0)
             {
                 Console.WriteLine("No hay supervisores agregados aún");
+                Console.WriteLine("===============================");
             }
 
             else
@@ -86,6 +92,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (lista.Count == 0)
             {
                 Console.WriteLine("No hay auxiliares agregados aún");
+                Console.WriteLine("===============================");
             }
 
             else
@@ -96,6 +103,26 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                     Console.WriteLine("Auxiliar" + " " + (i + 1));
                     Console.WriteLine("============");
                     Console.WriteLine(lista[i].information());
+                    Console.WriteLine(" ");
+                }
+            }
+        }
+        public void VerProductos(List<Producto> lista)
+        {
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("No hay productos agregados al supermercado aún");
+                Console.WriteLine("===============================");
+            }
+
+            else
+            {
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine("Producto" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(lista[i].informationProducto());
                     Console.WriteLine(" ");
                 }
             }
@@ -112,6 +139,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 if ((ci._rut == _cliente._rut) && (ci._nombre == _cliente._nombre) && (ci._apellido == _cliente._apellido) && (ci._nacimiento == _cliente._nacimiento) && (ci._nacionalidad == _cliente._nacionalidad))
                 {
                     Console.WriteLine("Este cliente ya estaba antes ingresado");
+                    Console.WriteLine("===============================");
                     return false;
                 }
 
@@ -133,6 +161,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 if ((ei._rut == _empleado._rut) && (ei._nombre == _empleado._nombre) && (ei._apellido == _empleado._apellido) && (ei._nacimiento == _empleado._nacimiento) && (ei._nacionalidad == _empleado._nacionalidad))
                 {
                     Console.WriteLine("Este empleado ya estaba antes ingresado");
+                    Console.WriteLine("===============================");
                     return false;
                 }
 
@@ -154,6 +183,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 if ((bi._rut == _jefe._rut) && (bi._nombre == _jefe._nombre) && (bi._apellido == _jefe._apellido) && (bi._nacimiento == _jefe._nacimiento) && (bi._nacionalidad == _jefe._nacionalidad))
                 {
                     Console.WriteLine("Este jefe ya estaba antes ingresado");
+                    Console.WriteLine("===============================");
                     return false;
                 }
 
@@ -175,6 +205,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 if ((si._rut == _supervisor._rut) && (si._nombre == _supervisor._nombre) && (si._apellido == _supervisor._apellido) && (si._nacimiento == _supervisor._nacimiento) && (si._nacionalidad == _supervisor._nacionalidad))
                 {
                     Console.WriteLine("Este supervisor ya estaba antes ingresado");
+                    Console.WriteLine("===============================");
                     return false;
                 }
 
@@ -196,6 +227,8 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 if ((ai._rut == _auxiliar._rut) && (ai._nombre == _auxiliar._nombre) && (ai._apellido == _auxiliar._apellido) && (ai._nacimiento == _auxiliar._nacimiento) && (ai._nacionalidad == _auxiliar._nacionalidad))
                 {
                     Console.WriteLine("Este auxiliar ya estaba antes ingresado");
+                    Console.WriteLine("===============================");
+
                     return false;
                 }
 
@@ -217,6 +250,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 if ((pi._nombreproducto == _producto._nombreproducto) && (pi._precio == _producto._precio) && (pi._marca == _producto._marca) && (pi._stock == _producto._stock))
                 {
                     Console.WriteLine("Este producto ya estaba antes ingresado");
+                    Console.WriteLine("===============================");
                     return false;
                 }
 
@@ -242,6 +276,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (emp== null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún empleado");
+                Console.WriteLine("================================================");
             }
 
             if (emp != null)
@@ -249,6 +284,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Bosses jefe = new Bosses(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo, emp._horario);
                 listajefes.Add(jefe);
                 Console.WriteLine("El empleado" +" "+ emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut +" "+ "a sido ascendido a jefe");
+                Console.WriteLine("================================================================================================================");
             }
 
             
@@ -278,6 +314,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (emp == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún empleado");
+                Console.WriteLine("==============================================");
             }
 
             if (emp != null)
@@ -285,6 +322,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Supervisors superv = new Supervisors(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo, emp._horario);
                 listasupervisores.Add(superv);
                 Console.WriteLine("El empleado" + " " + emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut +" "+ "a sido ascendido a supervisor");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -314,6 +352,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (emp == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún empleado");
+                Console.WriteLine("===============================================");
             }
 
             if (emp != null)
@@ -321,6 +360,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Auxiliaries aux = new Auxiliaries(emp._rut, emp._nombre, emp._apellido, emp._nacimiento, emp._nacionalidad, emp._sueldo, emp._horario);
                 listauxiliares.Add(aux);
                 Console.WriteLine("El empleado" +" "+ emp._nombre + " " + emp._apellido + " " + "de rut:" + emp._rut +" "+ "a sido camibiado a auxiliar");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -351,6 +391,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (boss == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún jefe");
+                Console.WriteLine("===========================================");
             }
 
             if (boss != null)
@@ -358,6 +399,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Employees emple = new Employees(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo, boss._horario);
                 listaempleados.Add(emple);
                 Console.WriteLine("El jefe" +" "+ boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut +" "+"a sido descendido a empleado");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -387,6 +429,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (boss == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún jefe");
+                Console.WriteLine("===========================================");
             }
 
             if (boss != null)
@@ -394,6 +437,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Supervisors supervi = new Supervisors(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo, boss._horario);
                 listasupervisores.Add(supervi);
                 Console.WriteLine("El jefe" +" "+ boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut +" "+ "a sido camiado a supervisor");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -423,6 +467,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (boss == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún jefe");
+                Console.WriteLine("===========================================");
             }
 
             if (boss != null)
@@ -430,6 +475,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Auxiliaries auxi = new Auxiliaries(boss._rut, boss._nombre, boss._apellido, boss._nacimiento, boss._nacionalidad, boss._sueldo, boss._horario);
                 listauxiliares.Add(auxi);
                 Console.WriteLine("El jefe" +" "+ boss._nombre + " " + boss._apellido + " " + "de rut:" + boss._rut +" "+ "a sido descendido a auxiliar");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -459,6 +505,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (sv == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún supervisor");
+                Console.WriteLine("=================================================");
             }
 
             if (sv != null)
@@ -466,6 +513,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Employees emple = new Employees(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo, sv._horario);
                 listaempleados.Add(emple);
                 Console.WriteLine("El supervisor" +" "+ sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut +"  "+ "a sido descendido a empleado");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -495,6 +543,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (sv == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún supervisor");
+                Console.WriteLine("=================================================");
             }
 
             if (sv != null)
@@ -502,6 +551,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Bosses bosse = new Bosses(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo, sv._horario);
                 listajefes.Add(bosse);
                 Console.WriteLine("El supervisor" +" "+ sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut +" "+ "a sido cambiado a jefe");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -531,6 +581,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (sv == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún supervisor");
+                Console.WriteLine("=================================================");
             }
 
             if (sv != null)
@@ -538,6 +589,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Auxiliaries auxi2 = new Auxiliaries(sv._rut, sv._nombre, sv._apellido, sv._nacimiento, sv._nacionalidad, sv._sueldo, sv._horario);
                 listauxiliares.Add(auxi2);
                 Console.WriteLine("El supervisor" +" "+ sv._nombre + " " + sv._apellido + " " + "de rut:" + sv._rut +" "+"a sido descendido a auxiliar");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -567,13 +619,15 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (ax == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún auxiliar");
+                Console.WriteLine("===============================================");
             }
 
             if (ax != null)
             {
                 Employees emple2 = new Employees(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo, ax._horario);
                 listaempleados.Add(emple2);
-                Console.WriteLine("El auxiliar" +" "+ ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut +" "+ "a sido camiado a empleado");
+                Console.WriteLine("El auxiliar" +" "+ ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut +" "+ "a sido cambiado a empleado");
+                Console.WriteLine("================================================================================================================");
             }
 
 
@@ -603,6 +657,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (ax == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún auxiliar");
+                Console.WriteLine("===============================================");
             }
 
             if (ax != null)
@@ -610,6 +665,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Bosses boss2 = new Bosses(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo, ax._horario);
                 listajefes.Add(boss2);
                 Console.WriteLine("El auxiliar" +" "+ ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut +" "+ "a sido ascendido a jefe");
+                Console.WriteLine("=============================================================================================================");
             }
 
 
@@ -639,6 +695,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (ax == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún auxiliar");
+                Console.WriteLine("===============================================");
             }
 
             if (ax != null)
@@ -646,6 +703,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                 Supervisors suv2 = new Supervisors(ax._rut, ax._nombre, ax._apellido, ax._nacimiento, ax._nacionalidad, ax._sueldo, ax._horario);
                 listasupervisores.Add(suv2);
                 Console.WriteLine("El auxiliar" +" "+ ax._nombre + " " + ax._apellido + " " + "de rut:" + ax._rut +" "+ "a sido ascendido a supervisor");
+                Console.WriteLine("=============================================================================================================");
             }
 
 
@@ -675,11 +733,13 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (e1== null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún empleado");
+                Console.WriteLine("===============================================");
             }
             if (e1 != null)
             {
                 e1._sueldo = sueldo;
                 Console.WriteLine("Se le a cambiado el sueldo al empleado:" +" "+ e1._nombre + " " + e1._apellido + " " + "al monto:" +" "+e1._sueldo);
+                Console.WriteLine("=============================================================================================================");
             }
 
         }
@@ -698,11 +758,13 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (b1 == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún jefe");
+                Console.WriteLine("===========================================");
             }
             if (b1 != null)
             {
                 b1._sueldo = sueldo;
                 Console.WriteLine("Se le a cambiado el sueldo al jefe:" +" "+ b1._nombre + " " + b1._apellido + " " + "al monto:"+" "+ + b1._sueldo);
+                Console.WriteLine("=============================================================================================================");
             }
 
         }
@@ -721,11 +783,13 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (s1 == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún supervisor");
+                Console.WriteLine("==================================================");
             }
             if (s1 != null)
             {
                 s1._sueldo = sueldo;
                 Console.WriteLine("Se le a cambiado el sueldo al supervisor" +" "+ s1._nombre + " " + s1._apellido + " " + "al monto:" +" "+ s1._sueldo);
+                Console.WriteLine("=============================================================================================================");
             }
 
         }
@@ -744,11 +808,13 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (a1 == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún auxiliar");
+                Console.WriteLine("===============================================");
             }
             if (a1 != null)
             {
                 a1._sueldo = sueldo;
                 Console.WriteLine("Se le a cambiado el sueldo al auxiliar" +" "+ a1._nombre + " " + a1._apellido + " " + "al monto:" +" "+ a1._sueldo);
+                Console.WriteLine("=============================================================================================================");
             }
 
         }
@@ -767,11 +833,15 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (e2 == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún empleado");
+                Console.WriteLine("================================================");
+
             }
             if (e2 != null)
             {
                 e2._horario = horario;
                 Console.WriteLine("Se le a cambiado el horario al empleado" +" "+ e2._nombre + " " + e2._apellido + " " + "al horario:" +" "+ e2._horario);
+                Console.WriteLine("=============================================================================================================");
+
             }
 
         }
@@ -790,11 +860,15 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (b2 == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún jefe");
+                Console.WriteLine("===========================================");
+
             }
             if (b2 != null)
             {
                 b2._horario = horario;
                 Console.WriteLine("Se le a cambiado el horario al jefe" +" "+b2._nombre + " " + b2._apellido + " " + "al horario:" +" "+ b2._horario);
+                Console.WriteLine("=============================================================================================================");
+
             }
 
         }
@@ -813,11 +887,15 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (s2 == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún supervisor");
+                Console.WriteLine("=================================================");
+
             }
             if (s2 != null)
             {
                 s2._horario = horario;
                 Console.WriteLine("Se le a cambiado el horario al supervisor" +"  "+ s2._nombre + " " + s2._apellido + " " + "al horario:" +" "+ s2._horario);
+                Console.WriteLine("=============================================================================================================");
+
             }
 
         }
@@ -836,64 +914,104 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (a2 == null)
             {
                 Console.WriteLine("El rut indicado no coincide con ningún auxiliar");
+                Console.WriteLine("===============================================");
+
             }
             if (a2 != null)
             {
                 a2._horario = horario;
                 Console.WriteLine("Se le a cambiado el horario al auxiliar" +" "+ a2._nombre + " " + a2._apellido + " " + "al horario:" +" "+ a2._horario);
+                Console.WriteLine("=============================================================================================================");
+
             }
 
         }
-        //public void RealizarunaCompra(string nombreProducto, string marcaproducto, string rut, string stock)
-        //{
-            //Client cliente = null;
-            //List<Producto> productocompra = new List<Producto>();
-            //for  (int i = 0; i < listaclientes.Count; i++)
-           //{
-                //if (listaclientes[i]._rut == rut)
-                //{
-                    //cliente= listaclientes[i];
+        public List<Producto> RealizarunaCompra(string nombreProducto, string marcaproducto)
+        {
+
+            
+
+                productoscomprados = new List<Producto>();
+
+            Producto productocompra = null;
+            for (int i = 0; i < listaproductos.Count; i++)
+            {
+                if ((listaproductos[i]._nombreproducto == nombreProducto) && (listaproductos[i]._marca == marcaproducto))
+                {
+                    productocompra = listaproductos[i];
+
+                }
+            }
+            if (productocompra == null)
+            {
+                Console.WriteLine("El producto indicado no coincide con ningúno que tenga el supermercado");
+                
+            }
+            if (productocompra != null)
+            {
+                Console.WriteLine("Producto agregado al carro");
+                productoscomprados.Add(productocompra);
+                productocompra._stock -= 1;
+                Console.WriteLine("El stock actualizado del producto agregado es:" + productocompra._stock);
+            
+               
+            }
+            return productoscomprados;
+
+            
+            
+
+            
+        }
+        public void ListaBoletas(string nombreproducto, string marcaproducto, string rut)
+        {
+            Client cliente2 = null;
+            for (int i = 0; i < listaclientes.Count; i++)
+            {
+                if (listaclientes[i]._rut == rut)
+                {
+                    cliente2 = listaclientes[i];
                     
+                }
 
-                    
+            }
+            if (cliente2 == null)
+            {
+                Console.WriteLine("El rut indicado no coincide con ningún empleado");
+                Console.WriteLine("================================================");
+                
+            }
 
-                //}
-            //}
-            //if (cliente == null)
-            //{
-                //Console.WriteLine("El rut indicado no coincide con ningún cliente");
+            if (cliente2 != null)
+            {
+                Console.WriteLine("Cliente encontrado exitosamente, ahora puedes realizar las compras");
                 
-            //}
-            //if (cliente != null)
-            //{
-                
-                //Console.WriteLine("Se ha encontrado al cliente, proceda a elegir los productos");
-                
-            //}
+            }
 
-            //Producto product = null;
-            //for (int i = 0; i < listaproductos.Count; i++)
-            //{
-                //if ((listaproductos[i]._nombreproducto == nombreProducto) && (listaproductos[i]._marca == marcaproducto))
-                //{
-                    //product = listaproductos[i];
 
-                //}
-            //}
-            //if (product == null)
-            //{
-                //Console.WriteLine("El producto indicado no coincide con ningúno que tenga el supermercado");
+
+            List<Producto> listaproduct = RealizarunaCompra(nombreproducto, marcaproducto);
+            if (listaproduct.Count == 0)
+            {
+                Console.WriteLine("Por lo que es imposible crear la boleta imposible crear la boleta");
                 
-            //}
-            //if (product != null)
-            //{
-                //Console.WriteLine("Producto agregado al carro");
-                //productocompra.Add(product);
-                //product._stock -= 1;
-                //Console.WriteLine("El stock actualizado del producto agregado es:" + product._stock);
-                
-                
-            //}
-        //}
+            }
+            Employees emp2 = null;
+            Random r1 = new Random();
+            int indexBtn = r1.Next(listaempleados.Count);
+            emp2 = listaempleados[indexBtn];
+
+            Boleta boletas = new Boleta(cliente2, listaproduct,emp2);
+            listbol.Add(boletas);
+            Console.WriteLine("===============================");
+            Console.WriteLine("Boleta exitosamente creada");
+            Console.WriteLine("===============================");
+            Console.WriteLine("Nombre cliente:"+ cliente2._nombre+" "+cliente2._apellido);
+            Console.WriteLine("Nombre empleado que lo atendió:" + emp2._nombre + " " + emp2._apellido);
+            Console.WriteLine(" Fecha de atención:" +" "+ DateTime.Now);
+            Console.WriteLine(boletas.informationPLL());
+            Console.WriteLine("===============================");
+        }
+
     }
 }
