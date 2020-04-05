@@ -15,10 +15,14 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             Console.WriteLine("3.-Modificar rol del personal");
             Console.WriteLine("4.-Modificar sueldo personal");
             Console.WriteLine("5.-Modificar horario personal");
-            Console.WriteLine("6.-Salir del programa");
+            Console.WriteLine("6.-Agregar productos");
+            Console.WriteLine("7.-Ver lista productos tienda");
+            Console.WriteLine("8.-Comprar productos");
+            Console.WriteLine("9.-Ver historial de boletas");
+            Console.WriteLine("10.-Salir del programa");
 
             string accion = null;
-            while (accion != "6")
+            while (accion != "10")
             {
 
                 accion = Console.ReadLine();
@@ -84,12 +88,18 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("=====================================");
                                     Console.WriteLine("Has salido de información de personal");
                                     Console.WriteLine("======================================");
+                                    Console.WriteLine("                              ");
+                                    Console.WriteLine("                              ");
                                     Console.WriteLine("1.-Ver información del personal");
                                     Console.WriteLine("2.-Agregar personal y clientes");
                                     Console.WriteLine("3.-Modificar rol del personal");
                                     Console.WriteLine("4.-Modificar sueldo personal");
                                     Console.WriteLine("5.-Modificar horario personal");
-                                    Console.WriteLine("6.-Salir del programa");
+                                    Console.WriteLine("6.-Agregar productos");
+                                    Console.WriteLine("7.-Ver lista productos tienda");
+                                    Console.WriteLine("8.-Agregar productos al carro");
+                                    Console.WriteLine("9.-Ver historial de boletas");
+                                    Console.WriteLine("10.-Salir del programa");
 
 
                                     break;
@@ -285,12 +295,18 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("Has salido de agregar personal y clientes");
                                     Console.WriteLine("=====================");
+                                    Console.WriteLine("                              ");
+                                    Console.WriteLine("                              ");
                                     Console.WriteLine("1.-Ver información del personal");
                                     Console.WriteLine("2.-Agregar personal y clientes");
                                     Console.WriteLine("3.-Modificar rol del personal");
                                     Console.WriteLine("4.-Modificar sueldo personal");
                                     Console.WriteLine("5.-Modificar horario personal");
-                                    Console.WriteLine("6.-Salir del programa");
+                                    Console.WriteLine("6.-Agregar productos");
+                                    Console.WriteLine("7.-Ver lista productos tienda");
+                                    Console.WriteLine("8.-Agregar productos al carro");
+                                    Console.WriteLine("9.-Ver historial de boletas");
+                                    Console.WriteLine("10.-Salir del programa");
                                     break;
                                 default:
                                     Console.WriteLine("No se ha seleccionado ninguna opción válida");
@@ -564,12 +580,18 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("Has salido de la opción mover de rol");
                                     Console.WriteLine("=====================");
+                                    Console.WriteLine("                              ");
+                                    Console.WriteLine("                              ");
                                     Console.WriteLine("1.-Ver información del personal");
                                     Console.WriteLine("2.-Agregar personal y clientes");
                                     Console.WriteLine("3.-Modificar rol del personal");
                                     Console.WriteLine("4.-Modificar sueldo personal");
                                     Console.WriteLine("5.-Modificar horario personal");
-                                    Console.WriteLine("6.-Salir del programa");
+                                    Console.WriteLine("6.-Agregar productos");
+                                    Console.WriteLine("7.-Ver lista productos tienda");
+                                    Console.WriteLine("8.-Agregar productos al carro");
+                                    Console.WriteLine("9.-Ver historial de boletas");
+                                    Console.WriteLine("10.-Salir del programa");
                                     break;
                                 default:
                                     Console.WriteLine("No se ha seleccionado ninguna opción válida");
@@ -650,12 +672,18 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("Has salido de la opción cambiar sueldo");
                                     Console.WriteLine("=====================");
+                                    Console.WriteLine("                              ");
+                                    Console.WriteLine("                              ");
                                     Console.WriteLine("1.-Ver información del personal");
                                     Console.WriteLine("2.-Agregar personal y clientes");
                                     Console.WriteLine("3.-Modificar rol del personal");
                                     Console.WriteLine("4.-Modificar sueldo personal");
                                     Console.WriteLine("5.-Modificar horario personal");
-                                    Console.WriteLine("6.-Salir del programa");
+                                    Console.WriteLine("6.-Agregar productos");
+                                    Console.WriteLine("7.-Ver lista productos tienda");
+                                    Console.WriteLine("8.-Agregar productos al carro");
+                                    Console.WriteLine("9.-Ver historial de boletas");
+                                    Console.WriteLine("10.-Salir del programa");
                                     break;
                                 default:
                                     Console.WriteLine("No se ha seleccionado ninguna opción válida");
@@ -738,12 +766,18 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                                     Console.WriteLine("=====================");
                                     Console.WriteLine("Has salido de la opción cambiar horario");
                                     Console.WriteLine("=====================");
+                                    Console.WriteLine("                              ");
+                                    Console.WriteLine("                              ");
                                     Console.WriteLine("1.-Ver información del personal");
                                     Console.WriteLine("2.-Agregar personal y clientes");
                                     Console.WriteLine("3.-Modificar rol del personal");
                                     Console.WriteLine("4.-Modificar sueldo personal");
                                     Console.WriteLine("5.-Modificar horario personal");
-                                    Console.WriteLine("6.-Salir del programa");
+                                    Console.WriteLine("6.-Agregar productos");
+                                    Console.WriteLine("7.-Ver lista productos tienda");
+                                    Console.WriteLine("8.-Agregar productos al carro");
+                                    Console.WriteLine("9.-Ver historial de boletas");
+                                    Console.WriteLine("10.-Salir del programa");
                                     break;
                                 default:
                                     Console.WriteLine("No se ha seleccionado ninguna opción válida");
@@ -753,6 +787,130 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                             }
                         }
                         break;
+                    case "6":
+                        Console.WriteLine("=====================");
+                        Console.WriteLine("Agregar producto:");
+                        Console.WriteLine("=====================");
+                        string nombreproducto = "";
+                        string precio = "";
+                        string marca = "";
+                        int stock = 0;
+                        
+                        Console.WriteLine("Ingrese nombre porducto");
+                        nombreproducto = Console.ReadLine();
+                        Console.WriteLine("Ingrese marca del producto");
+                        marca = Console.ReadLine();
+                        Console.WriteLine("Ingrese precio del producto");
+                        precio = Console.ReadLine();
+                        Console.WriteLine("Ingrese stock del producto");
+                        stock = Convert.ToInt32(Console.ReadLine());
+
+                        Producto p1 = new Producto(nombreproducto, precio, marca, stock);
+                        super.AgregarProducto(p1);
+                        Console.WriteLine("                              ");
+                        Console.WriteLine("                              ");
+                        Console.WriteLine("1.-Ver información del personal");
+                        Console.WriteLine("2.-Agregar personal y clientes");
+                        Console.WriteLine("3.-Modificar rol del personal");
+                        Console.WriteLine("4.-Modificar sueldo personal");
+                        Console.WriteLine("5.-Modificar horario personal");
+                        Console.WriteLine("6.-Agregar productos");
+                        Console.WriteLine("7.-Ver lista productos tienda");
+                        Console.WriteLine("8.-Comprar productos");
+                        Console.WriteLine("9.-Ver historial de boletas");
+                        Console.WriteLine("10.-Salir del programa");
+                        break;
+                    case "7":
+                        Console.WriteLine("=====================");
+                        Console.WriteLine("Productos:");
+                        Console.WriteLine("=====================");
+                        super.VerProductos(super.listaproductos);
+                        Console.WriteLine("                              ");
+                        Console.WriteLine("                              ");
+                        Console.WriteLine("1.-Ver información del personal");
+                        Console.WriteLine("2.-Agregar personal y clientes");
+                        Console.WriteLine("3.-Modificar rol del personal");
+                        Console.WriteLine("4.-Modificar sueldo personal");
+                        Console.WriteLine("5.-Modificar horario personal");
+                        Console.WriteLine("6.-Agregar productos");
+                        Console.WriteLine("7.-Ver lista productos tienda");
+                        Console.WriteLine("8.-Comprar productos");
+                        Console.WriteLine("9.-Ver historial de boletas");
+                        Console.WriteLine("10.-Salir del programa");
+                        break;
+
+                    case "8":
+                        string respuesta = "";
+                        while (respuesta != "no")
+                        {
+                            
+                            Console.WriteLine("¿Desea agregar un producto al carro?");
+                            respuesta = Console.ReadLine();
+                            if (respuesta == "si")
+                            {
+                                string nombreproduc = "";
+                                string marcapro = "";
+                                Console.WriteLine("Ingrese el nombre de el producto que desea comprar");
+                                nombreproduc = Console.ReadLine();
+                                Console.WriteLine("Ingrese la marca de el producto que desea comprar");
+                                marcapro = Console.ReadLine();
+
+
+                                super.RealizarunaCompra(nombreproduc, marcapro);
+
+                            }
+
+
+                        }
+                        string rutcliente = "";
+                        Console.WriteLine("Ingrese el rut del cliente al cual le quiere atribuir esta compra");
+                        rutcliente = Console.ReadLine();
+                        super.ArmaBoletas(rutcliente);
+                        Console.WriteLine("                              ");
+                        Console.WriteLine("                              ");
+                        Console.WriteLine("1.-Ver información del personal");
+                        Console.WriteLine("2.-Agregar personal y clientes");
+                        Console.WriteLine("3.-Modificar rol del personal");
+                        Console.WriteLine("4.-Modificar sueldo personal");
+                        Console.WriteLine("5.-Modificar horario personal");
+                        Console.WriteLine("6.-Agregar productos");
+                        Console.WriteLine("7.-Ver lista productos tienda");
+                        Console.WriteLine("8.-Comprar productos");
+                        Console.WriteLine("9.-Ver historial de boletas");
+                        Console.WriteLine("10.-Salir del programa");
+                        break;
+                    case "9":
+                        Console.WriteLine("===============================================================================");
+                        Console.WriteLine("Estas son las boletas que tienes hasta el momento");
+                        Console.WriteLine("===============================================================================");
+                        super.Verboletas();
+                        Console.WriteLine("                              ");
+                        Console.WriteLine("                              ");
+                        Console.WriteLine("1.-Ver información del personal");
+                        Console.WriteLine("2.-Agregar personal y clientes");
+                        Console.WriteLine("3.-Modificar rol del personal");
+                        Console.WriteLine("4.-Modificar sueldo personal");
+                        Console.WriteLine("5.-Modificar horario personal");
+                        Console.WriteLine("6.-Agregar productos");
+                        Console.WriteLine("7.-Ver lista productos tienda");
+                        Console.WriteLine("8.-Comprar productos");
+                        Console.WriteLine("9.-Ver historial de boletas");
+                        Console.WriteLine("10.-Salir del programa");
+                        break;
+                    case "10":
+                        Console.WriteLine("=====================");
+                        Console.WriteLine("Has salido del programa");
+                        Console.WriteLine("=====================");
+
+                        break;
+                    default:
+                        Console.WriteLine("No se ha seleccionado ninguna opción válida");
+                        break;
+
+
+
+
+
                 }
             }
         }
