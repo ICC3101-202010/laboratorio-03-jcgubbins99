@@ -24,6 +24,83 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             listauxiliares = new List<Auxiliaries>();
             listaproductos = new List<Producto>();
         }
+        public void VerEmpleados(List<Employees> lista)
+        {
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("No hay empleados agregados aún");
+            }
+
+            else
+            {
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine("Empleado" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(lista[i].information());
+                    Console.WriteLine(" ");
+                }
+            }
+        }
+        public void VerJefes(List<Bosses> lista)
+        {
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("No hay jefes agregados aún");
+            }
+
+            else
+            {
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine("Jefe" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(lista[i].information());
+                    Console.WriteLine(" ");
+                }
+            }
+        }
+        public void VerSupervisores(List<Supervisors> lista)
+        {
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("No hay supervisores agregados aún");
+            }
+
+            else
+            {
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine("Supervisor" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(lista[i].information());
+                    Console.WriteLine(" ");
+                }
+            }
+        }
+        public void VerAuxiliares(List<Auxiliaries> lista)
+        {
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("No hay auxiliares agregados aún");
+            }
+
+            else
+            {
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine("Auxiliar" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(lista[i].information());
+                    Console.WriteLine(" ");
+                }
+            }
+        }
+
         public bool AgregarCliente(Client _cliente)
         {
 
@@ -62,7 +139,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             }
 
             listaempleados.Add(_empleado);
-            Console.WriteLine("Cliente agregado");
+            Console.WriteLine("Empleado agregado");
             Console.WriteLine("================");
             return true;
         }
@@ -125,7 +202,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             }
 
             listauxiliares.Add(_auxiliar);
-            Console.WriteLine("Supervisor agregado");
+            Console.WriteLine("Auxiliar agregado");
             Console.WriteLine("================");
             return true;
         }
@@ -767,5 +844,56 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             }
 
         }
+        //public void RealizarunaCompra(string nombreProducto, string marcaproducto, string rut, string stock)
+        //{
+            //Client cliente = null;
+            //List<Producto> productocompra = new List<Producto>();
+            //for  (int i = 0; i < listaclientes.Count; i++)
+           //{
+                //if (listaclientes[i]._rut == rut)
+                //{
+                    //cliente= listaclientes[i];
+                    
+
+                    
+
+                //}
+            //}
+            //if (cliente == null)
+            //{
+                //Console.WriteLine("El rut indicado no coincide con ningún cliente");
+                
+            //}
+            //if (cliente != null)
+            //{
+                
+                //Console.WriteLine("Se ha encontrado al cliente, proceda a elegir los productos");
+                
+            //}
+
+            //Producto product = null;
+            //for (int i = 0; i < listaproductos.Count; i++)
+            //{
+                //if ((listaproductos[i]._nombreproducto == nombreProducto) && (listaproductos[i]._marca == marcaproducto))
+                //{
+                    //product = listaproductos[i];
+
+                //}
+            //}
+            //if (product == null)
+            //{
+                //Console.WriteLine("El producto indicado no coincide con ningúno que tenga el supermercado");
+                
+            //}
+            //if (product != null)
+            //{
+                //Console.WriteLine("Producto agregado al carro");
+                //productocompra.Add(product);
+                //product._stock -= 1;
+                //Console.WriteLine("El stock actualizado del producto agregado es:" + product._stock);
+                
+                
+            //}
+        //}
     }
 }
