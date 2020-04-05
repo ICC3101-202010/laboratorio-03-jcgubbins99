@@ -429,9 +429,72 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
                         }
                         break;
                     case "5":
+                        Console.WriteLine("a.-Modificar horario empleado");
+                        Console.WriteLine("b.-Modificar horario jefe");
+                        Console.WriteLine("c.-Modificar horario supervisor");
+                        Console.WriteLine("d.-Modificar horario auxiliar");
+                        Console.WriteLine("e.-Salir de esta opción");
+                        string opcion5 = null;
+                        while (opcion5 != "e")
+                        {
+                            opcion5 = Console.ReadLine();
+                            switch (opcion5)
+                            {
+                                case "a":
+                                    string rutu = "";
+                                    string horari = "";
+                                    Console.WriteLine("ingrese el rut del empleado al que desea cambiarle el horario");
+                                    rutu = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nuevo horario para este empleado");
+                                    horari = Console.ReadLine();
+                                    super.HorarioEmpleado(rutu, horari);
+                                    break;
+                                case "b":
+                                    string rutu1 = "";
+                                    string horari1 = "";
+                                    Console.WriteLine("ingrese el rut del jefe al que desea cambiarle el horario");
+                                    rutu1 = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nuevo horario para este jefe");
+                                    horari1 = Console.ReadLine();
+                                    super.HorarioJefe(rutu1, horari1);
+                                    break;
+                                case "c":
+                                    string rutu2 = "";
+                                    string horari2 = "";
+                                    Console.WriteLine("ingrese el rut del supervisor al que desea cambiarle el horario");
+                                    rutu2 = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nuevo horario para este supervisor");
+                                    horari2 = Console.ReadLine();
+                                    super.HorarioSupervisor(rutu2, horari2);
+                                    break;
+                                case "d":
+                                    string rutu3 = "";
+                                    string horari3 = "";
+                                    Console.WriteLine("ingrese el rut del auxiliar al que desea cambiarle el horario");
+                                    rutu3 = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nuevo horario para este auxiliar");
+                                    horari3 = Console.ReadLine();
+                                    super.HorarioAuxiliar(rutu3, horari3);
+                                    break;
+                                case "e":
+                                    Console.WriteLine("=====================");
+                                    Console.WriteLine("Has salido de la opción cambiar horario");
+                                    Console.WriteLine("=====================");
+                                    Console.WriteLine("1.-Ver información del personal");
+                                    Console.WriteLine("2.-Agregar personal y clientes");
+                                    Console.WriteLine("3.-Modificar rol del personal");
+                                    Console.WriteLine("4.-Modificar sueldo personal");
+                                    Console.WriteLine("5.-Modificar horario personal");
+                                    Console.WriteLine("6.-Salir del programa");
+                                    break;
+                                default:
+                                    Console.WriteLine("No se ha seleccionado ninguna opción válida");
+                                    break;
 
+
+                            }
+                        }
                         break;
-
                 }
             }
         }

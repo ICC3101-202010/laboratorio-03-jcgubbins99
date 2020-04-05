@@ -771,7 +771,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (e2 != null)
             {
                 e2._horario = horario;
-                Console.WriteLine("Se le a cambiado el horario al empleado" + e2._nombre + " " + e2._apellido + " " + "al horario:" + e2._horario);
+                Console.WriteLine("Se le a cambiado el horario al empleado" +" "+ e2._nombre + " " + e2._apellido + " " + "al horario:" +" "+ e2._horario);
             }
 
         }
@@ -794,7 +794,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (b2 != null)
             {
                 b2._horario = horario;
-                Console.WriteLine("Se le a cambiado el horario al jefe" +b2._nombre + " " + b2._apellido + " " + "al horario:" + b2._horario);
+                Console.WriteLine("Se le a cambiado el horario al jefe" +" "+b2._nombre + " " + b2._apellido + " " + "al horario:" +" "+ b2._horario);
             }
 
         }
@@ -817,7 +817,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (s2 != null)
             {
                 s2._horario = horario;
-                Console.WriteLine("Se le a cambiado el horario al supervisor" + s2._nombre + " " + s2._apellido + " " + "al horario:" + s2._horario);
+                Console.WriteLine("Se le a cambiado el horario al supervisor" +"  "+ s2._nombre + " " + s2._apellido + " " + "al horario:" +" "+ s2._horario);
             }
 
         }
@@ -840,7 +840,7 @@ namespace Laboratorio3_Juan_Carlos_Gubbins
             if (a2 != null)
             {
                 a2._horario = horario;
-                Console.WriteLine("Se le a cambiado el horario al auxiliar" + a2._nombre + " " + a2._apellido + " " + "al horario:" + a2._horario);
+                Console.WriteLine("Se le a cambiado el horario al auxiliar" +" "+ a2._nombre + " " + a2._apellido + " " + "al horario:" +" "+ a2._horario);
             }
 
         }
